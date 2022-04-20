@@ -9,3 +9,12 @@ import fetch from 'node-fetch';
     })
 }
 
+export function compare(sortTitle){
+    sortTitle.sort((a,b) => {
+        if (a.Title < b.Title){
+        return 1;}else if (a.Title > b.Title){
+        return -1;} else {
+        return 0;}
+    });
+    return sortTitle
+    }
